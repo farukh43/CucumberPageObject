@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="19.834908">
+    <testcase classname="FreeCRM Smoke Test" name="TC_SMOKE_TEST_FREECRM_001" time="19.834908">
+        <failure message="java.lang.NullPointerException&#13;&#10;&#9;at com.qa.utils.TestBase.countOfWorking_And_Non_workingLink(TestBase.java:149)&#13;&#10;&#9;at com.qa.stepDefinitions.HomePageStepDef.verify_the_broken_and_working_links(HomePageStepDef.java:39)&#13;&#10;&#9;at ✽.And Verify the broken and working links(SmokeTest.feature:12)&#13;&#10;">
+            <![CDATA[Given I have launch the browser.............................................passed
+And I should navigate to the login page of FREE Crm Application.............passed
+Then Verify the user is on Login Page.......................................passed
+When I Should be able to enter the credentials..............................passed
+Then HomePage Should be displayed...........................................passed
+And Verify all the tabs are visible.........................................passed
+And Verify the broken and working links.....................................failed
+And I Logout from the Application...........................................skipped
+
+StackTrace:
+java.lang.NullPointerException
+	at com.qa.utils.TestBase.countOfWorking_And_Non_workingLink(TestBase.java:149)
+	at com.qa.stepDefinitions.HomePageStepDef.verify_the_broken_and_working_links(HomePageStepDef.java:39)
+	at ✽.And Verify the broken and working links(SmokeTest.feature:12)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
