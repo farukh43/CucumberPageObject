@@ -1,10 +1,5 @@
 package com.qa.stepDefinitions;
 
-import java.io.IOException;
-import java.util.List;
-
-import org.openqa.selenium.WebElement;
-
 import com.qa.pages.HomePage;
 import cucumber.api.java.en.Then;
 
@@ -12,7 +7,7 @@ public class HomePageStepDef extends HomePage {
 
 	@Then("^HomePage Should be displayed$")
 	public void homepage_Should_be_displayed() {
-		
+
 		validateHomePageTittle();
 		validateCorrectUseName();
 	}
@@ -30,15 +25,12 @@ public class HomePageStepDef extends HomePage {
 		EmailTabLink();
 		CampaignsTabLink();
 		FormsTabLink();
-		 
-		
+
 	}
 
 	@Then("^Verify the broken and working links$")
-	public void verify_the_broken_and_working_links() throws IOException {
-		
-		List<WebElement> links = null;
-		countOfWorking_And_Non_workingLink(links);
+	public void verify_the_broken_and_working_links() throws Exception {
+		countOfWorking_And_Non_workingLink();
 	}
 
 }

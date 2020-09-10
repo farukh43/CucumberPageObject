@@ -3,9 +3,8 @@ package com.qa.utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -20,6 +19,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -144,29 +144,16 @@ public class TestBase {
 		FileUtils.copyFile(fs, new File("./TestResultScreenshot/" + screenshot + ".png"));
 		System.out.println("ScreenShot Taken");
 	}
-
-	public static int countOfWorking_And_Non_workingLink(List<WebElement> elementList) throws IOException {
-		int count = 0;
-		for (int i = 0; i < elementList.size(); i++) {
-			WebElement el = elementList.get(i);
-			String url = el.getAttribute("href");
-			URL urlToBeCheck = new URL(url);
-			HttpURLConnection connection = (HttpURLConnection) urlToBeCheck.openConnection();
-			connection.connect();
-			connection.setRequestMethod("GET");
-			if (connection.getResponseCode() == 200) {
-				System.out.println("links working fine");
-				test.log(Status.PASS, "Total number of working links ==" + count);
-				
-			} else {
-				count++;
-			}
+	
+	public void SelectDivDropDown(WebElement locatorValue, String Value) {
+		try {
+			Actions act = new Actions(driver);
+			act.click(locatorValue).sendKeys(Value).build().perform();
+			test.log(Status.PASS, "DropDown Selected : " + Value);
+		} catch (NoSuchElementException e) {
+			test.log(Status.FAIL, "Unable to select the dropdown: "+e);
+			throw (e);
 		}
-		System.out.println("Total number of non working link ==" + count);
-		test.log(Status.PASS, "Total number of non working links ==" + count);
-		return count;
 	}
-
-
 
 }

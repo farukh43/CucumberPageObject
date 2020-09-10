@@ -9,6 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import com.aventstack.extentreports.Status;
 import com.qa.utils.TestBase;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Assert;
@@ -55,11 +59,7 @@ public class HomePage extends TestBase {
 	@FindBy(xpath = "//span[contains(text(),'Forms')]")
 	WebElement FormsTabLink;
 	
-	@FindBy(tagName = "a")
-	WebElement AllURL;
-
-	List<WebElement> links = (List<WebElement>) AllURL;
-
+	
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -271,4 +271,71 @@ public class HomePage extends TestBase {
 		}
 		return FormsLinkVar;
 	}
-}
+	
+	
+
+//	public static int countOfWorking_And_Non_workingLink_Old() throws IOException {
+//		List<WebElement> linkslist = driver.findElements(By.tagName("a"));
+//		linkslist.addAll(driver.findElements(By.tagName("img")));
+//
+//		int count = 0;
+//		for (int i = 0; i < linkslist.size(); i++) {
+//			WebElement el = linkslist.get(i);
+//			String url = el.getAttribute("href");
+//			URL urlToBeCheck = new URL(url);
+//			HttpURLConnection connection = (HttpURLConnection) urlToBeCheck.openConnection();
+//			connection.connect();
+//			connection.setRequestMethod("GET");
+//			if (connection.getResponseCode() == 200) {
+//				System.out.println("links working fine");
+//				test.log(Status.PASS, "Total number of working links ==" + count);
+//				
+//			} else {
+//				count++;
+//			}
+//		}
+//		System.out.println("Total number of non working link ==" + count);
+//		test.log(Status.PASS, "Total number of non working links ==" + count);
+//		return count;
+//	}
+//
+	public void countOfWorking_And_Non_workingLink() throws Exception, IOException {
+		int count = 0;
+		List<WebElement> linkslist = driver.findElements(By.tagName("a"));
+		linkslist.addAll(driver.findElements(By.tagName("img")));
+		test.log(Status.PASS, "Total number of links available is==" + linkslist.size());
+		List<WebElement> activeLinks = new ArrayList<WebElement>();
+		for (int i = 0; i < linkslist.size(); i++) {
+			if (linkslist.get(i).getAttribute("href") != null
+					&& (!linkslist.get(i).getAttribute("href").contains("javascript"))) {
+				activeLinks.add(linkslist.get(i));
+
+			}
+			
+			test.log(Status.PASS, "Total number of Active links available is==" + activeLinks.size());
+
+			for (int j = 0; j < activeLinks.size(); j++) {
+				HttpURLConnection connection = (HttpURLConnection) new URL(activeLinks.get(j).getAttribute("href"))
+						.openConnection();
+				connection.connect();
+				String response = connection.getResponseMessage();
+				connection.disconnect();
+				System.out.println(activeLinks.get(j).getAttribute("href") + "-->" + response);
+				test.log(Status.INFO, "Total number of Active links available i s==" + activeLinks.size());
+				
+				if (connection.getResponseCode() == 200) {
+					System.out.println("links working fine");
+					test.log(Status.PASS, "Total number of working links ==" + count);
+					
+				} else {
+					System.out.println(count);
+					test.log(Status.FAIL, "Total number of non working links ==" + count);
+					count++;
+				}
+			}	
+
+			}
+
+		}
+
+	}
