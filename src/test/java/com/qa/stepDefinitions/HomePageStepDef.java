@@ -1,7 +1,9 @@
 package com.qa.stepDefinitions;
 
 import com.qa.pages.HomePage;
-import cucumber.api.java.en.Then;
+
+import io.cucumber.java.en.Then;
+
 
 public class HomePageStepDef extends HomePage {
 

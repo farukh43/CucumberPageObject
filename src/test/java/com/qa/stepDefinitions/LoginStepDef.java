@@ -3,9 +3,11 @@ package com.qa.stepDefinitions;
 import com.qa.pages.HomePage;
 import com.qa.pages.LoginPage;
 import com.qa.utils.TestBase;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
+
 
 public class LoginStepDef extends TestBase {
 

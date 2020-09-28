@@ -3,9 +3,9 @@ package com.qa.stepDefinitions;
 import com.aventstack.extentreports.Status;
 import com.qa.utils.TestBase;
 
-import cucumber.api.Scenario;
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 
 public class CommonFns extends TestBase {
 	public String scenarioName;
@@ -22,17 +22,18 @@ public class CommonFns extends TestBase {
 	}
 	
 	
+	@SuppressWarnings("unlikely-arg-type")
 	@After
 	public void takeSceenshot (Scenario s)
 	{
 		try
 		{
 			//File sb = null;
-			if (s.getStatus().equalsIgnoreCase("Passed")) {
+			if (s.getStatus().equals("Passed")) {
 				System.out.println(s.getStatus());
 				
 			}
-			else if (s.getStatus().equalsIgnoreCase("Failed"))
+			else if (s.getStatus().equals("Failed"))
 			{
 				System.out.println(s.getStatus());	
 			}

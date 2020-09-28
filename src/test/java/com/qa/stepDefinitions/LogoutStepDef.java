@@ -2,7 +2,8 @@ package com.qa.stepDefinitions;
 
 import com.qa.pages.LogoutPage;
 
-import cucumber.api.java.en.Then;
+import io.cucumber.java.en.Then;
+
 
 public class LogoutStepDef extends LogoutPage {
 	
