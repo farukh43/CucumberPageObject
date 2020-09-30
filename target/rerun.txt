@@ -1,1 +1,1 @@
-file:src/test/resources/Features/SmokeTest.feature:5
+file:src/test/resources/Features/SmokeTest.feature:9

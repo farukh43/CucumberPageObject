@@ -3,11 +3,44 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-09-24T19:34:23.585Z",
+        "line": 4,
+        "name": "User Should be on Login Page",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 9210451500,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I have launch the browser",
+            "match": {
+              "location": "com.qa.stepDefinitions.BackgroundStepDef.i_have_launch_the_browser()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2815231300,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I should navigate to the login page of FREE Crm Application",
+            "match": {
+              "location": "com.qa.stepDefinitions.BackgroundStepDef.i_should_navigate_to_the_login_page_of_FREE_Crm_Application()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-09-28T11:31:36.945Z",
         "before": [
           {
             "result": {
-              "duration": 406187100,
+              "duration": 326812400,
               "status": "passed"
             },
             "match": {
@@ -15,14 +48,14 @@
             }
           }
         ],
-        "line": 5,
+        "line": 9,
         "name": "TC_SMOKE_TEST_FREECRM_001",
         "description": "",
         "id": "freecrm-smoke-test;tc-smoke-test-freecrm-001",
         "after": [
           {
             "result": {
-              "duration": 1350314500,
+              "duration": 2736343700,
               "status": "passed"
             },
             "match": {
@@ -35,33 +68,10 @@
         "steps": [
           {
             "result": {
-              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d85.0.4183.121)\nBuild info: version: \u00274.0.0-alpha-6\u0027, revision: \u00275f43a29cfc\u0027\nSystem info: host: \u0027DESKTOP-HPAC2FP\u0027, ip: \u0027192.168.0.103\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002713.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\\Users\\ss\\AppData\\Local\\T...}, goog:chromeOptions: {debuggerAddress: localhost:52283}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 8f577835de60b9c15992c864fabaa48b\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:639)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:748)\r\n\tat com.qa.utils.TestBase.LaunchBrowser(TestBase.java:100)\r\n\tat com.qa.stepDefinitions.LoginStepDef.i_have_launch_the_browser(LoginStepDef.java:20)\r\n\tat ✽.I have launch the browser(file:///C:/Users/ss/git/CucumberPageObject/src/test/resources/Features/SmokeTest.feature:6)\r\n",
-              "duration": 42078675600,
-              "status": "failed"
+              "duration": 67960900,
+              "status": "passed"
             },
-            "line": 6,
-            "name": "I have launch the browser",
-            "match": {
-              "location": "com.qa.stepDefinitions.LoginStepDef.i_have_launch_the_browser()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 7,
-            "name": "I should navigate to the login page of FREE Crm Application",
-            "match": {
-              "location": "com.qa.stepDefinitions.LoginStepDef.i_should_navigate_to_the_login_page_of_FREE_Crm_Application()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "status": "skipped"
-            },
-            "line": 8,
+            "line": 10,
             "name": "Verify the user is on Login Page",
             "match": {
               "location": "com.qa.stepDefinitions.LoginStepDef.verify_the_user_is_on_Login_Page()"
@@ -70,9 +80,10 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 532693600,
+              "status": "passed"
             },
-            "line": 9,
+            "line": 11,
             "name": "I Should be able to enter the credentials",
             "match": {
               "location": "com.qa.stepDefinitions.LoginStepDef.i_Should_be_able_to_enter_the_credentials()"
@@ -81,9 +92,11 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "error_message": "org.junit.ComparisonFailure: expected:\u003cFarukh Path[]\u003e but was:\u003cFarukh Path[an]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.qa.pages.HomePage.validateCorrectUseName(HomePage.java:84)\r\n\tat com.qa.stepDefinitions.HomePageStepDef.homepage_Should_be_displayed(HomePageStepDef.java:14)\r\n\tat ✽.HomePage Should be displayed(file:///C:/Users/ss/git/CucumberPageObject/src/test/resources/Features/SmokeTest.feature:12)\r\n",
+              "duration": 1918338300,
+              "status": "failed"
             },
-            "line": 10,
+            "line": 12,
             "name": "HomePage Should be displayed",
             "match": {
               "location": "com.qa.stepDefinitions.HomePageStepDef.homepage_Should_be_displayed()"
@@ -94,7 +107,7 @@
             "result": {
               "status": "skipped"
             },
-            "line": 11,
+            "line": 13,
             "name": "Verify all the tabs are visible",
             "match": {
               "location": "com.qa.stepDefinitions.HomePageStepDef.verify_all_the_tabs_are_visible()"
@@ -103,9 +116,10 @@
           },
           {
             "result": {
+              "duration": 1998100,
               "status": "skipped"
             },
-            "line": 12,
+            "line": 14,
             "name": "Verify the broken and working links",
             "match": {
               "location": "com.qa.stepDefinitions.HomePageStepDef.verify_the_broken_and_working_links()"
@@ -116,7 +130,7 @@
             "result": {
               "status": "skipped"
             },
-            "line": 13,
+            "line": 15,
             "name": "I Logout from the Application",
             "match": {
               "location": "com.qa.stepDefinitions.LogoutStepDef.i_Logout_from_the_Application()"

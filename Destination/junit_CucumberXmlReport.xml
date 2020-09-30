@@ -1,41 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="44.65">
-    <testcase classname="FreeCRM Smoke Test" name="TC_SMOKE_TEST_FREECRM_001" time="43.993">
-        <failure message="chrome not reachable&#10;  (Session info: chrome=85.0.4183.121)&#10;Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'&#10;System info: host: 'DESKTOP-HPAC2FP', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\ss\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:52283}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: 8f577835de60b9c15992c864fabaa48b" type="org.openqa.selenium.WebDriverException">
-            <![CDATA[Given I have launch the browser.............................................failed
-And I should navigate to the login page of FREE Crm Application.............skipped
-Then Verify the user is on Login Page.......................................skipped
-When I Should be able to enter the credentials..............................skipped
-Then HomePage Should be displayed...........................................skipped
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.458">
+    <testcase classname="FreeCRM Smoke Test" name="TC_SMOKE_TEST_FREECRM_001" time="17.765">
+        <failure message="expected:&lt;Farukh Path[]&gt; but was:&lt;Farukh Path[an]&gt;" type="org.junit.ComparisonFailure">
+            <![CDATA[Given I have launch the browser.............................................passed
+And I should navigate to the login page of FREE Crm Application.............passed
+Then Verify the user is on Login Page.......................................passed
+When I Should be able to enter the credentials..............................passed
+Then HomePage Should be displayed...........................................failed
 And Verify all the tabs are visible.........................................skipped
 And Verify the broken and working links.....................................skipped
 And I Logout from the Application...........................................skipped
 
 StackTrace:
-org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=85.0.4183.121)
-Build info: version: '4.0.0-alpha-6', revision: '5f43a29cfc'
-System info: host: 'DESKTOP-HPAC2FP', ip: '192.168.0.103', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.121, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\ss\AppData\Local\T...}, goog:chromeOptions: {debuggerAddress: localhost:52283}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 8f577835de60b9c15992c864fabaa48b
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:160)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:639)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)
-	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:748)
-	at com.qa.utils.TestBase.LaunchBrowser(TestBase.java:100)
-	at com.qa.stepDefinitions.LoginStepDef.i_have_launch_the_browser(LoginStepDef.java:20)
-	at ✽.I have launch the browser(file:///C:/Users/ss/git/CucumberPageObject/src/test/resources/Features/SmokeTest.feature:6)
+org.junit.ComparisonFailure: expected:<Farukh Path[]> but was:<Farukh Path[an]>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.qa.pages.HomePage.validateCorrectUseName(HomePage.java:84)
+	at com.qa.stepDefinitions.HomePageStepDef.homepage_Should_be_displayed(HomePageStepDef.java:14)
+	at ✽.HomePage Should be displayed(file:///C:/Users/ss/git/CucumberPageObject/src/test/resources/Features/SmokeTest.feature:12)
 ]]>
         </failure>
     </testcase>

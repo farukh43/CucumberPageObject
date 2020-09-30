@@ -21,21 +21,20 @@ public class CommonFns extends TestBase {
 		}
 	}
 	
-	
-	@SuppressWarnings("unlikely-arg-type")
 	@After
 	public void takeSceenshot (Scenario s)
 	{
 		try
 		{
 			//File sb = null;
-			if (s.getStatus().equals("Passed")) {
+			if (s.getStatus().equals("PASSED")) {
 				System.out.println(s.getStatus());
-				
+				captureScreenshot(scenarioName);
 			}
-			else if (s.getStatus().equals("Failed"))
+			else if (s.getStatus().equals("FAILED"))
 			{
-				System.out.println(s.getStatus());	
+				System.out.println(s.getStatus());
+				captureScreenshot(scenarioName);
 			}
 			extent.flush();
 			driver.quit();

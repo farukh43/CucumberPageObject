@@ -11,6 +11,7 @@ import java.util.concurrent.TimeUnit;
 import org.apache.commons.io.FileUtils;
 import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -36,7 +37,7 @@ public class TestBase {
 	public static com.aventstack.extentreports.ExtentTest test;
 	static int PAGE_LOAD_TIME_OUT = 20;
 	static int IMPLICIT_WAIT = 30;
-		
+
 	public TestBase() {
 		try {
 			prop = new Properties();
@@ -137,20 +138,20 @@ public class TestBase {
 	public static String getUrl() {
 		return driver.getCurrentUrl();
 	}
-	
+
 	public static void captureScreenshot(String screenshot) throws IOException {
 		File fs = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(fs, new File("./TestResultScreenshot/" + screenshot + ".png"));
 		System.out.println("ScreenShot Taken");
 	}
-	
+
 	public void SelectDivDropDown(WebElement locatorValue, String Value) {
 		try {
 			Actions act = new Actions(driver);
 			act.click(locatorValue).sendKeys(Value).build().perform();
 			test.log(Status.PASS, "DropDown Selected : " + Value);
 		} catch (NoSuchElementException e) {
-			test.log(Status.FAIL, "Unable to select the dropdown: "+e);
+			test.log(Status.FAIL, "Unable to select the dropdown: " + e);
 			throw (e);
 		}
 	}
