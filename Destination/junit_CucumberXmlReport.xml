@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="18.458">
-    <testcase classname="FreeCRM Smoke Test" name="TC_SMOKE_TEST_FREECRM_001" time="17.765">
-        <failure message="expected:&lt;Farukh Path[]&gt; but was:&lt;Farukh Path[an]&gt;" type="org.junit.ComparisonFailure">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="0.659">
+    <testcase classname="FreeCRM Smoke Test" name="TC_SMOKE_TEST_FREECRM_002" time="0.167">
+        <system-out>
             <![CDATA[Given I have launch the browser.............................................passed
 And I should navigate to the login page of FREE Crm Application.............passed
-Then Verify the user is on Login Page.......................................passed
-When I Should be able to enter the credentials..............................passed
-Then HomePage Should be displayed...........................................failed
-And Verify all the tabs are visible.........................................skipped
-And Verify the broken and working links.....................................skipped
-And I Logout from the Application...........................................skipped
-
-StackTrace:
-org.junit.ComparisonFailure: expected:<Farukh Path[]> but was:<Farukh Path[an]>
-	at org.junit.Assert.assertEquals(Assert.java:117)
-	at org.junit.Assert.assertEquals(Assert.java:146)
-	at com.qa.pages.HomePage.validateCorrectUseName(HomePage.java:84)
-	at com.qa.stepDefinitions.HomePageStepDef.homepage_Should_be_displayed(HomePageStepDef.java:14)
-	at ✽.HomePage Should be displayed(file:///C:/Users/ss/git/CucumberPageObject/src/test/resources/Features/SmokeTest.feature:12)
+Then HomePage Should be displayed...........................................passed
+And I Verify Calender page is displayed.....................................passed
+And I Verify Contacts page is displayed.....................................passed
+And I Verify Companies page is displayed....................................passed
+And I Verify Deals page is displayed........................................passed
+And I Verify Tasks page is displayed........................................passed
+And I Verify Cases page is displayed........................................passed
+And I Verify Calls page is displayed........................................passed
+And I Verify Documents page is displayed....................................passed
+And I Verify Email page is displayed........................................passed
+And I Verify Compaigns page is displayed....................................passed
+And I Verify Forms page is displayed........................................passed
+And I Logout from the Application...........................................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>

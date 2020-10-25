@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 9210451500,
+              "duration": 1000600,
               "status": "passed"
             },
             "line": 5,
@@ -23,7 +23,6 @@
           },
           {
             "result": {
-              "duration": 2815231300,
               "status": "passed"
             },
             "line": 6,
@@ -36,11 +35,11 @@
         ]
       },
       {
-        "start_timestamp": "2020-09-28T11:31:36.945Z",
+        "start_timestamp": "2020-09-30T19:08:34.941Z",
         "before": [
           {
             "result": {
-              "duration": 326812400,
+              "duration": 3998100,
               "status": "passed"
             },
             "match": {
@@ -48,14 +47,13 @@
             }
           }
         ],
-        "line": 9,
-        "name": "TC_SMOKE_TEST_FREECRM_001",
+        "line": 17,
+        "name": "TC_SMOKE_TEST_FREECRM_002",
         "description": "",
-        "id": "freecrm-smoke-test;tc-smoke-test-freecrm-001",
+        "id": "freecrm-smoke-test;tc-smoke-test-freecrm-002",
         "after": [
           {
             "result": {
-              "duration": 2736343700,
               "status": "passed"
             },
             "match": {
@@ -68,35 +66,9 @@
         "steps": [
           {
             "result": {
-              "duration": 67960900,
               "status": "passed"
             },
-            "line": 10,
-            "name": "Verify the user is on Login Page",
-            "match": {
-              "location": "com.qa.stepDefinitions.LoginStepDef.verify_the_user_is_on_Login_Page()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 532693600,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I Should be able to enter the credentials",
-            "match": {
-              "location": "com.qa.stepDefinitions.LoginStepDef.i_Should_be_able_to_enter_the_credentials()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "error_message": "org.junit.ComparisonFailure: expected:\u003cFarukh Path[]\u003e but was:\u003cFarukh Path[an]\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:117)\r\n\tat org.junit.Assert.assertEquals(Assert.java:146)\r\n\tat com.qa.pages.HomePage.validateCorrectUseName(HomePage.java:84)\r\n\tat com.qa.stepDefinitions.HomePageStepDef.homepage_Should_be_displayed(HomePageStepDef.java:14)\r\n\tat ✽.HomePage Should be displayed(file:///C:/Users/ss/git/CucumberPageObject/src/test/resources/Features/SmokeTest.feature:12)\r\n",
-              "duration": 1918338300,
-              "status": "failed"
-            },
-            "line": 12,
+            "line": 18,
             "name": "HomePage Should be displayed",
             "match": {
               "location": "com.qa.stepDefinitions.HomePageStepDef.homepage_Should_be_displayed()"
@@ -105,32 +77,139 @@
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
-            "line": 13,
-            "name": "Verify all the tabs are visible",
+            "line": 19,
+            "name": "I Verify Calender page is displayed",
             "match": {
-              "location": "com.qa.stepDefinitions.HomePageStepDef.verify_all_the_tabs_are_visible()"
+              "location": "com.qa.stepDefinitions.CalenderStepDef.i_verify_calender_page_is_displayed()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1998100,
-              "status": "skipped"
+              "duration": 999700,
+              "status": "passed"
             },
-            "line": 14,
-            "name": "Verify the broken and working links",
+            "line": 20,
+            "name": "I Verify Contacts page is displayed",
             "match": {
-              "location": "com.qa.stepDefinitions.HomePageStepDef.verify_the_broken_and_working_links()"
+              "location": "com.qa.stepDefinitions.ContactsStepDef.i_verify_contacts_page_is_displayed()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 998500,
+              "status": "passed"
             },
-            "line": 15,
+            "line": 21,
+            "name": "I Verify Companies page is displayed",
+            "match": {
+              "location": "com.qa.stepDefinitions.CompaniesStepDef.i_verify_companies_page_is_displayed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1999200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "I Verify Deals page is displayed",
+            "match": {
+              "location": "com.qa.stepDefinitions.DealsStepDef.i_verify_deals_page_is_displayed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "I Verify Tasks page is displayed",
+            "match": {
+              "location": "com.qa.stepDefinitions.TasksStepDef.i_verify_tasks_page_is_displayed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 999100,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "I Verify Cases page is displayed",
+            "match": {
+              "location": "com.qa.stepDefinitions.CasesStepDef.i_verify_cases_page_is_displayed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "I Verify Calls page is displayed",
+            "match": {
+              "location": "com.qa.stepDefinitions.CallsStepDef.i_verify_calls_page_is_displayed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000500,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "I Verify Documents page is displayed",
+            "match": {
+              "location": "com.qa.stepDefinitions.DocumentsStepDef.i_verify_documents_page_is_displayed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 998200,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "I Verify Email page is displayed",
+            "match": {
+              "location": "com.qa.stepDefinitions.EmailStepDef.i_verify_email_page_is_displayed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "I Verify Compaigns page is displayed",
+            "match": {
+              "location": "com.qa.stepDefinitions.CompaignsStepDef.i_verify_compaigns_page_is_displayed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 999300,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "I Verify Forms page is displayed",
+            "match": {
+              "location": "com.qa.stepDefinitions.FormsStepDef.i_verify_forms_page_is_displayed()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1998500,
+              "status": "passed"
+            },
+            "line": 30,
             "name": "I Logout from the Application",
             "match": {
               "location": "com.qa.stepDefinitions.LogoutStepDef.i_Logout_from_the_Application()"
@@ -143,7 +222,7 @@
             "name": "@SmokeTestOfFreeCRM"
           },
           {
-            "name": "@TC01"
+            "name": "@TC02"
           }
         ]
       }
